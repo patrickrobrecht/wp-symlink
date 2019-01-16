@@ -1,0 +1,16 @@
+{
+  "name": "create-symlinks-for-wordpress",
+  "version": "1.0.0",
+  "description": "Utility for creating symbolic links plugins and themes for WordPress installs",
+  "scripts": {
+    "symlink": "gulp",
+    "symlink-plugins": "gulp plugins",
+    "symlink-themes": "gulp themes"
+  },
+  "author": "Patrick Robrecht",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "merge-stream": "^1.0.1"
+  }
+}

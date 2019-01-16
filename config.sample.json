@@ -1,0 +1,8 @@
+{
+  "wordPressRoots": [
+    "path/to/root-directory-of-wordpress",
+    "path/to/root-directory-of-another-wordpress"
+  ],
+  "pluginDirectory": "path/to/directory-containing-plugins",
+  "themeDirectory": "path/to/directory-containing-themes"
+}
