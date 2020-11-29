@@ -1,16 +1,31 @@
 {
-  "name": "create-symlinks-for-wordpress",
+  "name": "wp-symlink",
   "version": "1.0.0",
-  "description": "Utility for creating symbolic links plugins and themes for WordPress installs",
-  "scripts": {
-    "symlink": "gulp",
-    "symlink-plugins": "gulp plugins",
-    "symlink-themes": "gulp themes"
-  },
+  "description": "Utility for creating symbolic links in the plugins and themes directories of WordPress",
   "author": "Patrick Robrecht",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "gulp": "^4.0.0",
-    "merge-stream": "^1.0.1"
+    "commander": "^6.2.0",
+    "gulp": "^4.0.2",
+    "gulp-print": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-config-standard": "^16.0.2"
+  },
+  "scripts": {
+    "cs": "eslint bin",
+    "csfix": "eslint bin --fix"
+  },
+  "bin": {
+    "wp-symlink": "bin/wp-symlink.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
   }
 }
