@@ -1,4 +1,4 @@
-# Symlink WordPress
+# wp-symlink
 
 wp-symlink is a [Node.js](https://nodejs.org/en/)
     based utility to creating symbolic links in the directories
@@ -24,4 +24,5 @@ Use `wp-symlink --help` for details.
 
 ## How to develop
 - Install dependencies via `npm install` and execute `npm link`.
-- Use `npm run cs` [`npm run csfix`] to check [fix] code style violations.
+- Use `npm run cs` [`npm run csfix`] to check [fix] code style violations using [eslint](https://eslint.org/).
+- Use `npm run test` to run the automatic tests with [Mocha](https://mochajs.org/).
