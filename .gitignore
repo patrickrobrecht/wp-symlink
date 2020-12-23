@@ -1,2 +1,4 @@
+.idea/
+.local-pack/
 node_modules/
 test/data/
