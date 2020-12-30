@@ -2,3 +2,4 @@
 .local-pack/
 node_modules/
 test/data/
+wp-symlink.json
