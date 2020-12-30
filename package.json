@@ -1,7 +1,7 @@
 {
   "name": "wp-symlink",
   "version": "1.0.0",
-  "description": "Utility for creating symbolic links in the plugins and themes directories of WordPress",
+  "description": "Utility for creating symbolic links in the plugins and themes directories of WordPress installations",
   "author": "Patrick Robrecht",
   "license": "GPL-3.0-or-later",
   "dependencies": {
