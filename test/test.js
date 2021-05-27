@@ -63,54 +63,70 @@ describe('CLI', function () {
   describe('CLI with long parameters', function () {
     it('Plugins and themes exist after wp-symlink --wp --plugins --themes', function () {
       execSync('wp-symlink --wp test/data/wp1a --plugins test/data/git/plugins/* --themes test/data/git/themes/*')
-      assertPlugins(allPlugins, 'test/data/wp1a', true)
-      assertThemes(allThemes, 'test/data/wp1a', true)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp1a', true)
+        assertThemes(allThemes, 'test/data/wp1a', true)
+      })
     })
 
     it('Plugins exist and themes do not exist after wp-symlink --wp --plugins', function () {
       execSync('wp-symlink --wp test/data/wp1b --plugins test/data/git/plugins/p1')
-      const expectedPlugins = ['p1']
-      assertPlugins(expectedPlugins, 'test/data/wp1b', true)
-      assertPlugins(arrayDiff(allPlugins, expectedPlugins), 'test/data/wp1b', false)
-      assertThemes(allThemes, 'test/data/wp1b', false)
+      sleep(1).then(() => {
+        const expectedPlugins = ['p1']
+        assertPlugins(expectedPlugins, 'test/data/wp1b', true)
+        assertPlugins(arrayDiff(allPlugins, expectedPlugins), 'test/data/wp1b', false)
+        assertThemes(allThemes, 'test/data/wp1b', false)
+      })
     })
 
     it('Plugins do not exist and themes exist after wp-symlink --wp --themes', function () {
       execSync('wp-symlink --wp test/data/wp1c --themes test/data/git/themes/*')
-      assertPlugins(allPlugins, 'test/data/wp1c', false)
-      assertThemes(allThemes, 'test/data/wp1c', true)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp1c', false)
+        assertThemes(allThemes, 'test/data/wp1c', true)
+      })
     })
 
     it('Neither plugins nor and themes exist after wp-symlink --wp', function () {
       execSync('wp-symlink --wp test/data/wp1d')
-      assertPlugins(allPlugins, 'test/data/wp1d', false)
-      assertThemes(allThemes, 'test/data/wp1d', false)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp1d', false)
+        assertThemes(allThemes, 'test/data/wp1d', false)
+      })
     })
   })
 
   describe('CLI with short parameters', function () {
     it('Plugins and themes exist after -w -p -t', function () {
       execSync('wp-symlink -w test/data/wp2a -p test/data/git/plugins/* -t test/data/git/themes/*')
-      assertPlugins(allPlugins, 'test/data/wp2a', true)
-      assertThemes(allThemes, 'test/data/wp2a', true)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp2a', true)
+        assertThemes(allThemes, 'test/data/wp2a', true)
+      })
     })
 
     it('Plugins exist and themes do not exist after wp-symlink -w -p', function () {
       execSync('wp-symlink -w test/data/wp2b -p test/data/git/plugins/*')
-      assertPlugins(allPlugins, 'test/data/wp2b', true)
-      assertThemes(allThemes, 'test/data/wp2b', false)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp2b', true)
+        assertThemes(allThemes, 'test/data/wp2b', false)
+      })
     })
 
     it('Plugins do not exist and themes exist after wp-symlink -w -t', function () {
       execSync('wp-symlink -w test/data/wp2c -t test/data/git/themes/*')
-      assertPlugins(allPlugins, 'test/data/wp2c', false)
-      assertThemes(allThemes, 'test/data/wp2c', true)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp2c', false)
+        assertThemes(allThemes, 'test/data/wp2c', true)
+      })
     })
 
     it('Neither plugins nor and themes exist after wp-symlink -w', function () {
       execSync('wp-symlink -w test/data/wp2d')
-      assertPlugins(allPlugins, 'test/data/wp2d', false)
-      assertThemes(allThemes, 'test/data/wp2d', false)
+      sleep(1).then(() => {
+        assertPlugins(allPlugins, 'test/data/wp2d', false)
+        assertThemes(allThemes, 'test/data/wp2d', false)
+      })
     })
   })
 
