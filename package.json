@@ -1,5 +1,5 @@
 {
-  "name": "wp-symlink",
+  "name": "@patrickrobrecht/wp-symlink",
   "version": "1.0.0",
   "description": "Utility for creating symbolic links in the plugins and themes directories of WordPress installations",
   "author": "Patrick Robrecht",
@@ -32,8 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/patrickrobrecht/wp-symlink"
+    "url": "git+https://github.com/patrickrobrecht/wp-symlink.git"
   },
+  "bugs": {
+    "url": "https://github.com/patrickrobrecht/wp-symlink/issues"
+  },
+  "homepage": "https://github.com/patrickrobrecht/wp-symlink#readme",
   "files": [
     "bin/wp-symlink.js"
   ]
